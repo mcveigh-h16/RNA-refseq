@@ -4,8 +4,9 @@ Created on Fri Apr  1 13:32:45 2022
 
 @author: mcveigh
 """
-#Feature Slicer to download genomes from an accession list extract 16S rRNA sequences and determine if the 16S genes in a single genome are identical. 
-#Identical sequences are disgarded from final outout. 
+#Feature Slicer to download genomes from an accession list extract 16S rRNA sequences and determine if the 16S
+# genes in a single genome are identical.
+
 
 import Bio
 import sys

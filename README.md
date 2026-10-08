@@ -116,14 +116,8 @@ status, and intended relationship to the rRNA workflows._
 
 Reads GenBank records, extracts every `rRNA` feature whose product is exactly
 `16S ribosomal RNA`, and writes FASTA records with organism names and coordinates.
-Minus-strand descriptions list the higher coordinate first.
-
-**Review notes:** Despite its header comment, this version does not remove
-identical sequences. It uses private coordinate attributes. Its count message
-incorrectly reports no features when exactly one match is present.
-
-**Manual review / additional details:** _Confirm whether this version remains in
-use and add a representative command and expected output._
+Minus-strand descriptions list the higher coordinate first. This version has been
+replaced by FeatureSlicer16S-2.py
 
 #### FeatureSlicer16S-2.py
 
@@ -138,8 +132,8 @@ Console output lists feature counts, sequence groups, and retained records.
 different genomes or organisms, rather than restarting for each genome. The
 printed `identical seqs` groups also include singleton groups.
 
-**Manual review / additional details:** _Confirm the intended input scope,
-representative-selection rule, and downstream use of the coordinate descriptions._
+This is the current working version of the 16S extraction script for rRNA_type strain
+work. It is intended to be run in a Python environment with Biopython installed.
 
 #### FeatureSlicer16S-3.py
 
