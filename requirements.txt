@@ -1,0 +1,20 @@
+# Direct dependencies for scripts and notebooks.
+# Versions are unpinned pending validation in the Linux myenv2 environment.
+# pip resolves and installs transitive dependencies automatically.
+
+# Sequence parsing, feature handling, and SEGUID checksums (import Bio).
+biopython
+
+# Tabular analysis and notebook name comparisons.
+pandas
+numpy
+
+# Excel exports through pandas.to_excel().
+openpyxl
+
+# Interactive notebook interface and Python kernel.
+notebook
+ipykernel
+
+# os and sys are part of the Python standard library.
+# External NCBI command-line tools must be provisioned separately.
