@@ -34,11 +34,11 @@ for seq_record in SeqIO.parse(inputfile, "genbank"):
                     #mystart = feature.location._start.position + 1
                     #myend = feature.location._end.position
                     #print("I found a 23S rRNA in", seq_record.id, "from", mystart, "to", myend)
-                    if feature.strand == -1:
+                    if feature.location.strand == -1:
                         sub_record = seq_record[feature.location.start:feature.location.end].reverse_complement()
                         sub_record.id = str_id
                         sub_record.description = (seq_record.description + " small subunit ribosomal RNA")
-                    elif feature.strand == 1:
+                    elif feature.location.strand == 1:
                         sub_record = seq_record[feature.location.start:feature.location.end]
                         sub_record.description = (seq_record.description + " small subunit ribosomal RNA")
                 #else:
