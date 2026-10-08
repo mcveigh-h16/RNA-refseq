@@ -41,7 +41,7 @@ for seq_record in SeqIO.parse(inputfile, "genbank"):
                 mystart = int(feature.location.start) + 1
                 myend = int(feature.location.end)
                 
-                if feature.strand == -1:
+                if feature.location.strand == -1:
                     sub_record = seq_record[feature.location.start:feature.location.end].reverse_complement()
                     sub_record.id = str_id
                     print(seq_record.id, "minus strand", myend, "to", mystart)
@@ -49,7 +49,7 @@ for seq_record in SeqIO.parse(inputfile, "genbank"):
                     stop = str(mystart)
                     sub_record.description = (seq_record.description + " " + start + " " + stop)
                     #sub_record.description = (seq_record.description + " 16S ribosomal RNA")
-                elif feature.strand == 1:
+                elif feature.location.strand == 1:
                     start = str(mystart)
                     stop = str(myend)
                     sub_record = seq_record[feature.location.start:feature.location.end]
